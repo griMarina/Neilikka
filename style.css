@@ -476,10 +476,10 @@ display: none;
 
 .about {
     background-image: url('img/bg2.svg');
-    background-size: 510px;
+    background-size: 45%;
     background-repeat: no-repeat;
-    background-position-x: -285px;
-    background-position-y: center;
+    background-position-x: -46%;
+    background-position-y: bottom;
     color: #0f3016; 
 }
 
@@ -490,8 +490,7 @@ display: none;
 
 .about_text {
     margin-bottom: 20px;
-    padding-left: 15%;
-    padding-right: 10px;
+    padding: 10px;
     text-align: center;
     font-size: 20px;
 }
@@ -506,10 +505,6 @@ display: none;
 @media (max-width: 767px) {
     .about {
         background-image: none;
-    }
-
-    .about_text {
-        padding: 10px;
     }
 
     .shop_img {
