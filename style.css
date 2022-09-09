@@ -491,6 +491,7 @@ display: none;
 .about_text {
     margin-bottom: 20px;
     padding-left: 15%;
+    padding-right: 10px;
     text-align: center;
     font-size: 20px;
 }
