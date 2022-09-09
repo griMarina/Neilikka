@@ -51,6 +51,90 @@ a {
     text-decoration-line: underline;
 }
 
+.drop_list {
+	background-color: #283b28;
+    display: none;
+    position: absolute;
+    padding: 15px 10px;
+    margin-left: -15px;
+}
+
+.drop_list li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+.drop_list li a:hover {
+    text-decoration-line: underline;
+}
+	
+.nav_item:hover .drop_list {
+	display: block;
+}
+
+.nav_mobile_box {
+    align-self: center;
+    display: none;
+}
+
+.nav_mobile {
+    position: absolute;
+    min-width: 150px;
+    right: 0;
+    top: 50px;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: 0.3s;
+    background-color: #283b28;
+    padding: 10px;
+}
+
+.show-menu-btn {
+    font-size: 22px;
+}
+
+.hide-menu-btn {
+    position: absolute;
+    top: -33px;
+    right: 10px;
+    font-size: 22px;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .nav_mobile {
+    transform: scalex(1);
+}
+
+#toggle:checked ~ .show-menu-btn {
+display: none;
+}
+
+.nav_item-mobile {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.hide-menu-btn:hover, .show-menu-btn:hover {
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav_mobile_box {
+        display: block;
+    }
+}
 
 .main {
     flex-grow: 1;
@@ -62,29 +146,46 @@ a {
   }
 
 .promo {
-    display: flex;
-    justify-content: flex-start;
-    min-height: 450px;
-    background-image: url('img/plant-gf0109265b_1920.jpg');
-    background-position-x: right;
-    background-position-y: top;
+    min-height: 720px;
+    background-image: url('img/bg-cut.jpg');
+    background-position-x: center;
+    background-position-y: bottom;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #ecd288;
+    background-size: cover;
     margin-bottom: 30px;
 }
 
 .promo_text {
-    align-self: center;
-    font-size: 26px;
+    width: 35%;
+    padding-top: 12%;
+    margin-left: 25%;
+    font-size: 28px;
     text-align: center;
-    width: 40%;
-    color: #0f3016;
-    padding-left: 5%;
+    color: #ffffff;
 }
 
 .promo_text > h1 {
     margin-bottom: 40px;
+}
+
+@media (max-width: 1192px) {
+    .promo_text {
+        padding-top: 15%;
+        margin-left: 20%;
+        font-size: 26px;
+    }
+}
+
+@media (max-width:767px) {
+    .promo_text > h1 {
+        font-size: 34px;
+    }
+
+    .promo_text {
+        width: 55%;
+        padding-top: 20%;
+        margin-left: 5%;
+    }
 }
 
 .news {
@@ -410,7 +511,6 @@ a {
 .item {
     width: 300px;
     margin: 10px;
-    overflow: hidden;
     min-height: 330px;
     margin-bottom: 20px;
     outline: 1px solid grey;
@@ -471,26 +571,4 @@ a {
     font-size: 14px;
     color: #FFFFFF;
     cursor: pointer;
-}
-
-.drop_list {
-	background-color: #f0f5f3;
-    display: none;
-    position: absolute;
-    padding-top: 7px;
-
-}
-
-.drop_list li {
-    list-style-type: none;
-    margin-bottom: 10px;
-    padding: 7px;
-}
-
-.drop_list li a {
-    color: #0f3016; 
-}
-	
-.nav_item:hover .drop_list {
-	display: block;
 }
