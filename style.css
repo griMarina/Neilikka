@@ -85,7 +85,7 @@ a {
     top: 50px;
     transform: scalex(0);
     transform-origin: right;
-    transition: 0.3s;
+    transition: 0.1s;
     background-color: #283b28;
     padding: 10px;
 }
@@ -228,6 +228,7 @@ display: none;
 
     .news_box {
         align-self: center;
+        width: 80%;
     }
 }
 
