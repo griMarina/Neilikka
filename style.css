@@ -480,7 +480,6 @@ display: none;
     background-repeat: no-repeat;
     background-position-x: -285px;
     background-position-y: center;
-    min-height: 800px;
     color: #0f3016; 
 }
 
@@ -497,9 +496,10 @@ display: none;
 }
 
 .shop_img {
-    width: 500px;
+    width: 50%;
     margin-top: 20px;
     align-self: center;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -512,7 +512,8 @@ display: none;
     }
 
     .shop_img {
-        margin-top: 10px;
+        width: 70%;
+        margin-top: 0;
     }
 }
 
@@ -522,7 +523,12 @@ display: none;
     background-size: 180px;
     background-repeat: no-repeat;
     background-position-y: bottom;
-    padding-left: 35%;
+}
+
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact_text {
@@ -570,6 +576,12 @@ display: none;
 
 .form_btn:hover {
     background-color: #c28f41;
+}
+
+@media (max-width: 767px) {
+    .contact {
+        background-image: none;
+    }
 }
 
 .cards {
