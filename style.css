@@ -191,7 +191,7 @@ display: none;
 .news {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    min-height: 400px;
     background-image: url('img/composition-with-beautiful-flowers.jpg');
     background-repeat: no-repeat;
     background-size: 400px;
@@ -221,11 +221,21 @@ display: none;
     color: #283b28;
 }
 
+@media (max-width: 767px) {
+    .news {
+        background-image: none;
+    }
+
+    .news_box {
+        align-self: center;
+    }
+}
+
 .advantages {
     display: flex;
     justify-content:space-around;
-    border-top: 3px groove #0f3016;
-    padding: 30px;
+    border-top: 3px solid #0f3016;
+    padding-top: 30px;
 
 }
 
@@ -237,6 +247,24 @@ display: none;
 
 .adv > img {
     width: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1192px) {
+    .adv > span {
+        font-size: 14px;
+    }
+
+    .adv > img {
+        width: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .advantages {
+        flex-direction: column;
+    }
 }
 
 .footer {
@@ -249,7 +277,7 @@ display: none;
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 30px;
-    height: 250px;
+    min-height: 250px;
 }
 
 .info {
@@ -325,8 +353,7 @@ display: none;
 .footer_bottom {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 7px;
 }
 
 .copyright {
@@ -355,6 +382,29 @@ display: none;
     background-color: #c28f41;
     color: #fff;
     transform: scale(1.1);
+}
+
+@media (max-width:767px) {
+    .footer_top {
+        flex-direction: column;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+
+    .subscribe {
+        align-self: center;
+        margin: 0;
+    }
+
+    .subscribe-title {
+        font-size: 20px;
+    }
+
+    .subscribe-form {
+        margin-top: 10px;
+    }
 }
 
 .catalog_text {
